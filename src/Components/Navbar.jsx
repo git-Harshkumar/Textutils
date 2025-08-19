@@ -1,13 +1,13 @@
 import React  from 'react';
 // import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
     <>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">TextUtils</Link>
+          <a className="navbar-brand" href="/">TextUtils</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -30,9 +30,9 @@ export default function Navbar(props) {
               </li> */}
               {/* <li className="nav-item" > */}
                 
-             <li className="nav-item">
-  <Link className="nav-link" to="/about">About</Link>
-</li>
+             {/* <li className="nav-item"> */}
+  {/* <a className="nav-link" to="/about">About</Link> */}
+{/* </li> */}
 
         
               {/* </li>  */}

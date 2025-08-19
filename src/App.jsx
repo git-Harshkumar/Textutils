@@ -4,12 +4,12 @@ import Navbar from './Components/Navbar';
 import About from './Components/About';
 import Textarea from './Components/Textarea';
 import Alert from './Components/Alert';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//    Route,
+// } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 export default function Myapp() {
   const [mode, setmode] = useState('light');
   const [alert, setalert] = useState(null);
@@ -88,16 +88,15 @@ export default function Myapp() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar Title="TextUtiles" mode={mode} togglemode={togglemode} togglemoder={togglemoder} togglemodeb={togglemodeb} togglemodeg={togglemodeg} color={color} setPage={setpage} />
         <Alert alert={alert} />
         <div className="container my-4">
-          <Routes>
-            <Route path="/About" element={<About />} /> 
-            <Route path="/" element={<Textarea mode={mode} color={color} />} />
-          </Routes>
+          {/* <Routes>
+            <Route path="/About" element={<About />} />  */}
+            <Textarea mode={mode} color={color} /> 
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
